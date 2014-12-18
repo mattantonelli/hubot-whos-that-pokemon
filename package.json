@@ -1,9 +1,23 @@
 {
-  "name": "pokebot",
-  "version": "0.0.0",
-  "private": true,
+  "name": "whos-that-pokemon",
+  "description": "Play Who's That Pokemon? with Hubot using the Gen I lineup."
+  "version": "0.0.1",
   "author": "Matt Antonelli <mattr.antonelli@gmail.com>",
-  "description": "Plays the game Who's That Pokemon? with you!",
+  "license": "MIT",
+
+  "keywords": [
+    "pokemon"
+  ],
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattantonelli/hubot-whos-that-pokemon"
+  },
+
+  "bugs": {
+    "url": "https://github.com/mattantonelli/hubot-whos-that-pokemon/issues"
+  },
+
   "dependencies": {
     "hubot": "^2.10.0",
     "hubot-diagnostics": "0.0.1",
@@ -20,7 +34,6 @@
     "hubot-shipit": "^0.1.1",
     "hubot-youtube": "^0.1.2"
   },
-  "engines": {
-    "node": "0.10.x"
-  }
+
+  "main": "index.coffee"
 }
