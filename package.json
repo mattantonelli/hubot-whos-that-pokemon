@@ -22,7 +22,6 @@
 
   "dependencies": {
     "coffee-script": "~1.6",
-    "hubot-redis-brain": "0.0.2"
   },
 
   "devDependencies": {
