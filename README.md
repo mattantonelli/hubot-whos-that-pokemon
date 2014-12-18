@@ -2,6 +2,8 @@
 
 Play "Who's That Pokemon?" with Hubot using the Gen I lineup. This is an easy version of the original, since it uses the real images instead of silhouettes.
 
+Pokemon information provided by [Pokodox](https://github.com/TrevorS/pokodox).
+
 ## Installation
 
 In the Hubot project repo, run:

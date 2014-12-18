@@ -17,14 +17,14 @@
 #   github.com/mattantonelli
 
 # Pokémon Gen I JSON via Pokodox
-URL = "https://pokodox.herokuapp.com/pokez"
+URL = 'https://pokodox.herokuapp.com/pokez'
 
 module.exports = (robot) ->
 
   robot.respond /poke play/i, (msg) ->
     startGame(msg)
 
-  robot.respond /poke it's (.*)/i, (msg) ->
+  robot.respond /poke it's (\w+)/i, (msg) ->
     guessPoke(msg, msg.match[1])
 
   robot.respond /poke give up/i, (msg) ->
@@ -46,7 +46,7 @@ module.exports = (robot) ->
         msg.send "You got it! It's #{name}!"
         robot.brain.set('pokemon', null)
       else
-        msg.send "Nope. Try again!"
+        msg.send 'Nope. Try again!'
 
   giveUp = (msg) ->
     name = robot.brain.get('pokemon')
