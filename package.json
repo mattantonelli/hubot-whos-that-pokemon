@@ -1,12 +1,14 @@
 {
   "name": "whos-that-pokemon",
-  "description": "Play Who's That Pokemon? with Hubot using the Gen I lineup."
+  "description": "Play Who's That Pokemon? with Hubot using the Gen I lineup.",
   "version": "0.0.1",
   "author": "Matt Antonelli <mattr.antonelli@gmail.com>",
   "license": "MIT",
 
   "keywords": [
-    "pokemon"
+    "hubot",
+    "pokemon",
+    "trivia"
   ],
 
   "repository": {
@@ -19,21 +21,19 @@
   },
 
   "dependencies": {
-    "hubot": "^2.10.0",
-    "hubot-diagnostics": "0.0.1",
-    "hubot-google-images": "^0.1.2",
-    "hubot-google-translate": "^0.1.0",
-    "hubot-help": "^0.1.1",
-    "hubot-heroku-keepalive": "0.0.4",
-    "hubot-hipchat": "^2.7.5",
-    "hubot-maps": "0.0.1",
-    "hubot-pugme": "^0.1.0",
-    "hubot-redis-brain": "0.0.2",
-    "hubot-rules": "^0.1.0",
-    "hubot-scripts": "^2.5.16",
-    "hubot-shipit": "^0.1.1",
-    "hubot-youtube": "^0.1.2"
+    "coffee-script": "~1.6"
   },
 
-  "main": "index.coffee"
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "sinon-chai": "*",
+    "sinon": "*"
+  },
+
+  "main": "index.coffee",
+
+  "scripts": {
+    "test": "script/test"
+  }
 }
