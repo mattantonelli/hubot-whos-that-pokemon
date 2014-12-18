@@ -16,7 +16,7 @@
 # Author:
 #   github.com/mattantonelli
 
-# Pokémon Gen I JSON via Pokodox
+# Pokemon Gen I JSON via Pokodox
 URL = 'https://pokodox.herokuapp.com/pokez'
 
 module.exports = (robot) ->

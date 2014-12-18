@@ -18,7 +18,7 @@ Then add **hubot-whos-that-pokemon** to your `external-scripts.json`:
 
 ## Sample interaction
 
-```
+```text
 mattantonelli> hubot poke play
 Hubot> Who's That Pokemon? https://33.media.tumblr.com/860a69e3b72f02cc8268ff766768c794/tumblr_ngqwjw0Yjp1u650quo6_250.jpg
 mattantonelli> hubot poke it's ponyta
