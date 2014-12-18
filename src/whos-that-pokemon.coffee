@@ -3,7 +3,7 @@
 #   of the original, since it uses the real images instead of silhouettes.
 #
 # Dependencies:
-#   None
+#   hubot-redis-brain
 #
 # Configuration:
 #   None

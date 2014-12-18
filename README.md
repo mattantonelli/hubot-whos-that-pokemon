@@ -25,6 +25,7 @@ mattantonelli> hubot poke it's ponyta
 Hubot> You got it! It's Ponyta!
 
 mattantonelli> hubot poke play
+Hubot> Who's That Pokemon? https://38.media.tumblr.com/7bea9d3d6c9b894067a828748db53158/tumblr_ngqwlgAskc1u650quo8_250.jpg
 mattantonelli> hubot poke it's bellsprout
 Hubot> Nope. Try again!
 mattantonelli> hubot poke give up
