@@ -18,6 +18,7 @@
 
 # Pokemon Gen I JSON via Pokodox
 URL = 'https://pokodox.herokuapp.com/pokez'
+POKE_KEY = 'pokemon'
 
 module.exports = (robot) ->
 
@@ -30,30 +31,33 @@ module.exports = (robot) ->
   robot.respond /poke give up/i, (msg) ->
     giveUp(msg)
 
+  robot.respond /poke help/i, (msg) ->
+    msg.send "To start: hubot poke play\nTo guess: hubot poke it\'s <pokemon>\nTo give up: hubot poke give up"
+    msg.finish()
+
   startGame = (msg) ->
     num = randomInt(1, 151)
     robot.http("#{URL}/#{num}")
       .get() (err, res, body) ->
-        name = JSON.parse(body).name
-        img  = JSON.parse(body).url
-        robot.brain.set('pokemon', name)
+        { name: name, url: img } = JSON.parse(body)
+        robot.brain.set(POKE_KEY, name)
         msg.send "Who's That Pokemon? #{img}"
 
   guessPoke = (msg, guess) ->
-    name = robot.brain.get('pokemon')
-    if name != null
+    name = robot.brain.get(POKE_KEY)
+    if name
       if guess.toLowerCase() == name.toLowerCase()
         msg.send "You got it! It's #{name}!"
-        robot.brain.set('pokemon', null)
+        robot.brain.remove(POKE_KEY)
       else
         msg.send 'Nope. Try again!'
 
   giveUp = (msg) ->
-    name = robot.brain.get('pokemon')
-    if name != null
+    name = robot.brain.get(POKE_KEY)
+    if name
       msg.send("It was #{name}!")
-      robot.brain.set('pokemon', null)
+      robot.brain.remove(POKE_KEY)
 
   randomInt = (min, max) ->
-    return Math.floor(Math.random() * (max + 1 - min) + min)
+    Math.floor(Math.random() * (max + 1 - min) + min)
 

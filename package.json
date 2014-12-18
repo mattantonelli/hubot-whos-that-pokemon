@@ -1,7 +1,7 @@
 {
   "name": "hubot-whos-that-pokemon",
   "description": "Play Who's That Pokemon? with Hubot using the Gen I lineup.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Matt Antonelli <mattr.antonelli@gmail.com>",
   "license": "MIT",
 
